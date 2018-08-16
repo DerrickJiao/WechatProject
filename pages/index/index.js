@@ -24,6 +24,7 @@ Page({
     //因为数据返回不是数组所以要自己封装一个数组
     list: [],
     height: 663,
+    cityInfo: '',
 
 
   },
@@ -71,6 +72,7 @@ Page({
               quality: res.data.showapi_res_body.now.aqiDetail.quality,
               windPower: res.data.showapi_res_body.now.wind_power,
               windDirection: res.data.showapi_res_body.now.wind_direction,
+              cityInfo: res.data.showapi_res_body.cityInfo.c3,
               //拼接数组
               list: [
                 {

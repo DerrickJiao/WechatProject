@@ -5,6 +5,7 @@
   
 }
 
+
 .newTopView {
   display: flex;
   flex-direction: row;
@@ -27,12 +28,13 @@
   width: 35rpx;
   height: 35rpx;  
   position: absolute;
-  left: 130rpx;
+  left: 200rpx;
+  
 } 
 /*当前度数数组*/
 .degree {
   color: white;
-  font-size: 130rpx
+  font-size: 150rpx;
 }
 
 /*详细View样式*/
@@ -50,7 +52,9 @@
 /*当前度数数组*/
 .detailInfoDegree {
   color: white;
-  font-size: 30rpx
+  font-size: 30rpx;
+  background-image: linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0.1)); 
+  border-bottom: 1px solid rgba(255,255,255,255);
 }
 
 /*斜线*/
@@ -65,6 +69,12 @@
   color: white;
   margin-left: 20rpx;
   align-self: center
+}
+.city {
+  font-size: 30rpx;
+  color: white;
+  margin-left: 10rpx;
+
 }
 
 /*中间view样式*/
@@ -87,11 +97,13 @@
 .centerItemImage {
   width: 25rpx;
   height: 25rpx;
+  margin-top: 250rpx;
 }
 /*文字样式*/
 .centerItemText {
   font-size: 28rpx;
   color: white;
+  margin-top: 250rpx;
 }
 
 /*底部view样式*/
@@ -108,16 +120,19 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 200rpx;
+  margin-bottom: 500rpx;
 }
 
 /*最近七天样式*/
 .bottomImage {
   width: 70rpx;
   height: 70rpx;
+  border-top: 1px solid rgba(255,255,255,255);
+  
 }
 
 .bottomText {
   font-size: 28rpx;
   color: white;
+  
 }

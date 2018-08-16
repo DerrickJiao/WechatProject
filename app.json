@@ -4,9 +4,9 @@
     "pages/logs/logs"
   ],
   "window":{
-    "backgroundTextStyle":"light",
-    "navigationBarBackgroundColor": "rgb(61,57,90)",
-    "navigationBarTitleText": "Weather",
-    "navigationBarTextStyle":"white"
+    "backgroundTextStyle":"dark",
+    "navigationBarBackgroundColor": "#A4D3EE",
+    "navigationBarTitleText": "小焦天气",
+    "navigationBarTextStyle":"black"
   }
 }
