@@ -1,0 +1,12 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/logs/logs"
+  ],
+  "window":{
+    "backgroundTextStyle":"dark",
+    "navigationBarBackgroundColor": "#A4D3EE",
+    "navigationBarTitleText": "小焦天气",
+    "navigationBarTextStyle":"black"
+  }
+}
