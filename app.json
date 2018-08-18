@@ -1,12 +1,39 @@
 {
   "pages":[
     "pages/index/index",
-    "pages/logs/logs"
+    "pages/detail/detail"
   ],
   "window":{
     "backgroundTextStyle":"dark",
     "navigationBarBackgroundColor": "#A4D3EE",
     "navigationBarTitleText": "小焦天气",
     "navigationBarTextStyle":"black"
-  }
+  },
+
+
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "天气",
+        "iconPath": "image/today.png",
+        "selectedIconPath": "image/today-select.png"
+      },
+      {
+        "pagePath": "pages/detail/detail",
+        "text": "近期",
+        "iconPath": "image/future.png",
+        "selectedIconPath": "image/future-select.png"
+      }
+    ],
+    "borderStyle": "#ff00ff",
+    "backgroundColor": "#fff",
+    "color": "#888",
+    "selectedColor": "#3a94d2"
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "downloadFile": 10000
+  },
+  "debug": false
 }

@@ -8,20 +8,20 @@
   <view class="topView">
     <view class="degreeView">
     <!--当前温度-->
-      <text class="degree">{{currentTemperature}}</text>
-      <!--度数图标-->
-      <image class="circle" src="../../image/circle.png"></image>
+      <text class="degree">{{currentTemperature}}°C</text>
+      <!--度数图标
+      <image class="circle" src="../../image/circle.png"></image>-->
     </view>
     <view class="detailInfo">
       <view class="degreeView">
       <!--夜间天气情况-->
-        <text class="detailInfoDegree">{{nightAirTemperature}}</text>
-        <image class="detailInfoCircle" src="../../image/circle.png" />
-        <text class="detailInfoLine">/</text>
+        <text class="InfoDegree">{{nightAirTemperature}}°</text>
+       <!-- <image class="detailInfoCircle" src="../../image/circle.png" /> -->
+        <text class="InfoLine">/</text>
         <!--白天天气-->
-        <text class="detailInfoDegree">{{dayAirTemperature}}</text>
-        <!-- style优先级比class高会覆盖class中相同属性 -->
-        <image class="detailInfoCircle" style="margin-left: 57rpx; margin-right: 40rpx" src="../../image/circle.png" />
+        <text class="InfoDegree">{{dayAirTemperature}}°</text>
+        <!-- style优先级比class高会覆盖class中相同属性 
+        <image class="detailInfoCircle" style="margin-left: 57rpx; margin-right: 40rpx" src="../../image/circle.png" />-->
         <!-- 当前天气名字 -->
         <text class="detailInfoName">{{weather}}</text>
       </view>
@@ -48,6 +48,7 @@
   
   <!-- 底部view -->
   
+  <!--<view class="line">
   <view class="bottomView">
     <block wx:key="{{item}}" wx:for-items="{{list}}">
       <view class="bottomItemView">
@@ -60,15 +61,15 @@
         <text wx:elif="{{item.weekday == 6}}" class="bottomText">星期六</text>
         <text wx:else="{{item.weekday == 7}}" class="bottomText">星期日</text>
         <view class="degreeView" style="margin-top: 20rpx;">
-          <text class="detailInfoDegree">{{item.night_air_temperature}}</text>
-          <image class="detailInfoCircle" src="../../image/circle.png" />
-          <text class="detailInfoLine">/</text> 
-          <text class="detailInfoDegree">{{item.day_air_temperature}}</text>
-          <!-- style优先级比class高会覆盖class中相同属性 -->
+          <text class="detailInfoDegree">{{item.night_air_temperature}}°</text>
+          <!--<image class="detailInfoCircle" src="../../image/circle.png" />-->
+          <!--<text class="detailInfoLine">/</text> 
+          <text class="detailInfoDegree">{{item.day_air_temperature}}°</text>
+          <!-- style优先级比class高会覆盖class中相同属性 
           <image class="detailInfoCircle" style="margin-left: 57rpx; margin-right: 40rpx" src="../../image/circle.png" />
         </view>
       </view>
     </block>
   </view>
+</view>-->
 </view>
-

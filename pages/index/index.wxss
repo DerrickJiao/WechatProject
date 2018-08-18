@@ -5,6 +5,11 @@
   
 }
 
+page{
+  width:100%;
+  height:100%;
+  overflow: hidden;
+}
 
 .newTopView {
   display: flex;
@@ -18,11 +23,11 @@
   align-self: center;
   margin-top: -450rpx;
 }
-/*当前度数样式*/
+/*当前度数样式
 .degreeView {
   flex-direction: row;
   position: relative;
-}
+}*/
 /*当前温度度数图标*/
 .circle {
   width: 35rpx;
@@ -35,6 +40,12 @@
 .degree {
   color: white;
   font-size: 150rpx;
+  margin-top: 70rpx;
+}
+
+.smalldegree {
+  color: white;
+  font-size: 30rpx;
 }
 
 /*详细View样式*/
@@ -52,9 +63,17 @@
 /*当前度数数组*/
 .detailInfoDegree {
   color: white;
-  font-size: 30rpx;
+  font-size: 25rpx;
   background-image: linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0.1)); 
-  border-bottom: 1px solid rgba(255,255,255,255);
+
+}
+
+.InfoDegree {
+  color: white;
+  font-size: 25rpx;
+  margin-left: 30rpx;
+  background-image: linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0.1)); 
+
 }
 
 /*斜线*/
@@ -63,12 +82,19 @@
   margin-left: 15rpx;
   font-size: 30rpx;
 }
+/*斜线*/
+.InfoLine {
+  color: white;
+  margin-left: 35rpx;
+  font-size: 30rpx;
+}
 /*比如阴天 晴天，暴雨*/
 .detailInfoName {
   font-size: 30rpx;
   color: white;
-  margin-left: 20rpx;
+  margin-left: 30rpx;
   align-self: center
+
 }
 .city {
   font-size: 30rpx;
@@ -77,11 +103,12 @@
 
 }
 
+
 /*中间view样式*/
 .centerView {
   display: flex;
   flex-direction: row;
-  margin-top: -550rpx;
+  margin-top: 500rpx;
   justify-content: center;
   align-items: center;
 }
@@ -97,18 +124,19 @@
 .centerItemImage {
   width: 25rpx;
   height: 25rpx;
-  margin-top: 250rpx;
+  margin-top: -1850rpx;
 }
 /*文字样式*/
 .centerItemText {
   font-size: 28rpx;
   color: white;
-  margin-top: 250rpx;
+  margin-top: -1850rpx;
 }
 
 /*底部view样式*/
 .bottomView {
-  margin-top: -200rpx;
+  border-top: 1px solid rgba(255,255,255,255);
+  margin-top: -150rpx;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -120,14 +148,14 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 500rpx;
+  margin-bottom: 300rpx;
+  border-bottom: 1px solid rgba(255,255,255,255);
 }
 
 /*最近七天样式*/
 .bottomImage {
   width: 70rpx;
   height: 70rpx;
-  border-top: 1px solid rgba(255,255,255,255);
   
 }
 
@@ -136,3 +164,4 @@
   color: white;
   
 }
+

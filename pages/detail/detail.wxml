@@ -1,0 +1,37 @@
+<scroll-view  scroll-y class="page">
+  <view class="head" style="background : #A4D3EE; height: 107vh" >
+
+  
+      <block wx:key="{{item}}" wx:for-items="{{list}}">
+      <view class="day">
+        <view class="left">
+        <text wx:if="{{item.weekday == 1}}">星期一</text>
+        <text wx:elif="{{item.weekday == 2}}" >星期二</text>
+        <text wx:elif="{{item.weekday == 3}}" >星期三</text>
+        <text wx:elif="{{item.weekday == 4}}" >星期四</text>
+        <text wx:elif="{{item.weekday == 5}}" >星期五</text>
+        <text wx:elif="{{item.weekday == 6}}" >星期六</text>
+        <text wx:else="{{item.weekday == 7}}" >星期日</text>
+        </view>
+        <text>{{item.day_weather}}/</text>
+        <text>{{item.night_weather}}</text>
+        <image class="item" src="{{item.day_weather_pic}}" style="margin-bottom: 15rpx;margin-left: 55rpx;" />
+        <image class="item" src="{{item.night_weather_pic}}" style="margin-bottom: 15rpx;margin-left: 10rpx;" />
+        <view class="degreeView" style="margin-top: 20rpx;">
+        <view class="text">
+          <text class="temp">{{item.night_air_temperature}}°</text>
+          <!--<image class="detailInfoCircle" src="../../image/circle.png" />-->
+          <text class="temp">/</text> 
+          <text class="temp">{{item.day_air_temperature}}°</text></view>
+          <!-- style优先级比class高会覆盖class中相同属性 
+          <image class="detailInfoCircle" style="margin-left: 57rpx; margin-right: 40rpx" src="../../image/circle.png" />-->
+        </view>
+      </view>
+    </block>
+  
+
+  </view>
+
+
+
+</scroll-view>
