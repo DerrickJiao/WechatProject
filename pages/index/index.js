@@ -24,6 +24,7 @@ Page({
     //因为数据返回不是数组所以要自己封装一个数组
     list: [],
     height: 663,
+    //城市
     cityInfo: '',
 
 
@@ -32,6 +33,10 @@ Page({
   onLoad: function () {
     console.log('onLoad')
     var that = this
+
+    wx.showShareMenu({
+      withShareTicket: true
+    })
 
     //100%好像不好使 可以获取设备高度
     wx.getSystemInfo({
@@ -44,7 +49,7 @@ Page({
       success: function (res) {
         //通过经纬度请求数据
         wx.request({
-          //这个网站有免费API赶紧收藏
+          
           url: 'https://route.showapi.com/9-5',
           data: {
             showapi_appid: '59243',

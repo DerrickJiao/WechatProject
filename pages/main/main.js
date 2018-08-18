@@ -13,6 +13,11 @@ Page({
     console.log('onLoad')
     var that = this
   	//登录
+
+    wx.showShareMenu({
+      withShareTicket: true
+    })
+
     wx.login({
       success: function () {
         wx.getUserInfo({

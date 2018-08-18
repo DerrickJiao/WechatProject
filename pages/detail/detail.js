@@ -33,6 +33,11 @@ Page({
     console.log('onLoad')
     var that = this
 
+    wx.showShareMenu({
+      withShareTicket: true
+    })
+
+
     //100%好像不好使 可以获取设备高度
     wx.getSystemInfo({
       success: function (res) {

@@ -27,3 +27,7 @@
 .text {
   margin-top: -15rpx;
 }
+
+.wea {
+  text-align: center;
+}

@@ -13,8 +13,8 @@
         <text wx:elif="{{item.weekday == 6}}" >星期六</text>
         <text wx:else="{{item.weekday == 7}}" >星期日</text>
         </view>
-        <text>{{item.day_weather}}/</text>
-        <text>{{item.night_weather}}</text>
+        <text class="wea">{{item.day_weather}}/</text>
+        <text class="wea">{{item.night_weather}}</text>
         <image class="item" src="{{item.day_weather_pic}}" style="margin-bottom: 15rpx;margin-left: 55rpx;" />
         <image class="item" src="{{item.night_weather_pic}}" style="margin-bottom: 15rpx;margin-left: 10rpx;" />
         <view class="degreeView" style="margin-top: 20rpx;">
