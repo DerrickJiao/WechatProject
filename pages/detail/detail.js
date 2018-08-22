@@ -60,7 +60,8 @@ Page({
             lat: res.latitude,
             //获取一周情况 0是不获取
             needMoreDay: '1',
-            needIndex: '1'
+            needIndex: '1',
+            need3HourForcast: '1',
           },
           success: function (res) {
             console.log(res)
@@ -86,8 +87,10 @@ Page({
                   'day_weather': res.data.showapi_res_body.f1.day_weather,
                   'night_weather': res.data.showapi_res_body.f1.night_weather,
                   'day_air_temperature': res.data.showapi_res_body.f1.day_air_temperature,
-                  'night_air_temperature': res.data.showapi_res_body.f1.night_air_temperature
-                },
+                  'night_air_temperature': res.data.showapi_res_body.f1.night_air_temperature,
+                  'need3HourForcast':res.data.showapi_res_body.f1.need3HourForcast
+                  },
+
                 {
                   'day_weather_pic': res.data.showapi_res_body.f2.day_weather_pic,
                   'night_weather_pic': res.data.showapi_res_body.f2.night_weather_pic,

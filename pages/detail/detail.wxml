@@ -1,5 +1,5 @@
 <scroll-view  scroll-y class="page">
-  <view class="head" style="background : #A4D3EE; height: 107vh" >
+  <view class="head" style="background-image: url(https://s1.ax1x.com/2018/08/20/Ph64PK.md.jpg) " >
 
   
       <block wx:key="{{item}}" wx:for-items="{{list}}">

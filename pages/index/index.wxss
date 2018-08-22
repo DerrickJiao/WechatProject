@@ -1,167 +1,112 @@
-.container {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  
+
+.head {
+  color: #fff;
+  background-size: 100% 100%;
+  background-position: center top;
+  background-repeat: no-repeat;
 }
 
-page{
-  width:100%;
-  height:100%;
-  overflow: hidden;
+.head .extra {
+  padding: 20rpx;
+}
+.head .extra::after {
+  content:'';
+  display: block;
+  clear: both;
 }
 
-.newTopView {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+.head .extra .city{
+  float: left;
 }
 
-/*  头部样式上半部分*/
-.topView {
-  flex-direction: column;
-  align-self: center;
-  margin-top: -450rpx;
-}
-/*当前度数样式
-.degreeView {
-  flex-direction: row;
-  position: relative;
-}*/
-/*当前温度度数图标*/
-.circle {
-  width: 35rpx;
-  height: 35rpx;  
-  position: absolute;
-  left: 200rpx;
-  
-} 
-/*当前度数数组*/
-.degree {
-  color: white;
-  font-size: 150rpx;
-  margin-top: 70rpx;
+.head .extra .date{
+  float: right;
 }
 
-.smalldegree {
-  color: white;
-  font-size: 30rpx;
+.head .main {
+  text-align: center;
 }
 
-/*详细View样式*/
-.detailInfoView {
-  flex-direction: row;
+.head .main .temperature{
+  margin-top: 40rpx;
+  font-size: 120rpx;
 }
-/*当前最高和最低温度度数图标*/
-.detailInfoCircle {
-  width: 20rpx;
-  height: 20rpx;  
-  position: absolute;
-  left: 30rpx;
-} 
-
-/*当前度数数组*/
-.detailInfoDegree {
-  color: white;
-  font-size: 25rpx;
-  background-image: linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0.1)); 
-
+.head .main .weather{
+  margin-top: 20rpx;
+  font-size: 32rpx;
 }
 
-.InfoDegree {
-  color: white;
-  font-size: 25rpx;
-  margin-left: 30rpx;
-  background-image: linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0.1)); 
-
+.head .others {
+  padding: 40rpx;
+}
+.head .others>view {
+  width: 40%;
+  margin-top: 20rpx;
+  display: inline-block;
 }
 
-/*斜线*/
-.detailInfoLine {
-  color: white;
-  margin-left: 15rpx;
-  font-size: 30rpx;
+.hourly {
+  border-top: 1px solid rgba(255,255,255,0.25);
+  background-image: linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0.1));
+  height: 90px;
 }
-/*斜线*/
-.InfoLine {
-  color: white;
-  margin-left: 35rpx;
-  font-size: 30rpx;
+.hourly .wrap {
+  width: 700px;
 }
-/*比如阴天 晴天，暴雨*/
-.detailInfoName {
-  font-size: 30rpx;
-  color: white;
-  margin-left: 30rpx;
-  align-self: center
-
+.hourly .rap {
+  width: 600px;
 }
-.city {
-  font-size: 30rpx;
-  color: white;
-  margin-left: 10rpx;
-
-}
-
-
-/*中间view样式*/
-.centerView {
-  display: flex;
-  flex-direction: row;
-  margin-top: 500rpx;
-  justify-content: center;
-  align-items: center;
-}
-
-/*中间view分为两个view*/
-.centerItem {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-}
-/*Item中图片样式*/
-.centerItemImage {
-  width: 25rpx;
-  height: 25rpx;
-  margin-top: -1850rpx;
-}
-/*文字样式*/
-.centerItemText {
+.hourly .hour {
+  width: 150rpx;
+  text-align: center;
+  padding: 10px 0;
+  box-sizing: border-box;
+  color: #fff;
   font-size: 28rpx;
-  color: white;
-  margin-top: -1850rpx;
+  display: inline-block;
+}
+.hourly .wide {
+  width:180rpx;
+  text-align: center;
+  padding: 10px 0;
+  box-sizing: border-box;
+  color: #fff;
+  font-size: 40rpx;
+  display: inline-block;
+  margin-left: 20rpx;
+}
+.hourly image {
+  width: 60rpx;
+  height: 60rpx;
 }
 
-/*底部view样式*/
-.bottomView {
-  border-top: 1px solid rgba(255,255,255,255);
-  margin-top: -150rpx;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
+.suggestion>view{
+  padding: 40rpx 20rpx;
+  border-bottom: 1px solid #eee;
+}
+.suggestion>view:last-child{
+  border: none;
+}
+.suggestion>view::after{
+  content:'';
+  display: block;
+  clear: both;
+}
+.suggestion .detail {
+  margin-left: 40rpx;
+}
+.suggestion .detail .title {
+  font-size: 32rpx;
+  color: rgb(10, 10, 10);
 }
 
-
-.bottomItemView {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-bottom: 300rpx;
-  border-bottom: 1px solid rgba(255,255,255,255);
+.suggestion .detail .description {
+  margin-top: 20rpx;
+  font-size: 26rpx;
+  color: rgb(10, 10, 10);
+  line-height: 1;
 }
 
-/*最近七天样式*/
-.bottomImage {
-  width: 70rpx;
-  height: 70rpx;
-  
+.suggestion .head {
+  font-size: 36rpx;
 }
-
-.bottomText {
-  font-size: 28rpx;
-  color: white;
-  
-}
-

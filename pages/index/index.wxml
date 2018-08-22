@@ -1,75 +1,89 @@
-<!--100%布局好像不好使-->
-<view class="container" style="background : #A4D3EE; height: 100vh">
-<loading hidden="{{loadingHidden}}">加载天气...</loading>
-<view class="newTopView">
-<text class="city">{{cityInfo}}</text>
-<!--左边添加当前城市名字，点击跳转选择城市 右边添加刷新当前天气-->
-</view>
-  <view class="topView">
-    <view class="degreeView">
-    <!--当前温度-->
-      <text class="degree">{{currentTemperature}}°C</text>
-      <!--度数图标
-      <image class="circle" src="../../image/circle.png"></image>-->
+<scroll-view  scroll-y class="page">
+  <view class="head" style="background-image: url(https://s1.ax1x.com/2018/08/20/Ph64PK.md.jpg)">
+  <loading hidden="{{loadingHidden}}">加载天气...</loading>
+    <view class="extra">
+      <text class="city">{{cityInfo}}</text>
+      
     </view>
-    <view class="detailInfo">
-      <view class="degreeView">
-      <!--夜间天气情况-->
-        <text class="InfoDegree">{{nightAirTemperature}}°</text>
-       <!-- <image class="detailInfoCircle" src="../../image/circle.png" /> -->
-        <text class="InfoLine">/</text>
-        <!--白天天气-->
-        <text class="InfoDegree">{{dayAirTemperature}}°</text>
-        <!-- style优先级比class高会覆盖class中相同属性 
-        <image class="detailInfoCircle" style="margin-left: 57rpx; margin-right: 40rpx" src="../../image/circle.png" />-->
-        <!-- 当前天气名字 -->
-        <text class="detailInfoName">{{weather}}</text>
+    <view class="main">
+      <view class="temperature">{{currentTemperature}}<text>℃</text></view>
+     <text class="date">更新于{{temperature_time}}</text>
+      <view class="others">
+        <view class="pm">天气 {{weather}}</view>
+        <view class="pm">PM2.5 {{pm2_5}}</view>
+        <view class="wind">风向 {{windDirection}}</view>
+        <view class="humidity">湿度 {{sd}}</view>
       </view>
-    </view>
-  </view>
-  <!-- 中间部分 -->
-  <view class="centerView">
-    <view class="centerItem" style="margin-right: 25rpx;">
-      <image class="centerItemImage" src="../../image/leaf.png" />
-      <!-- 相同属性抽出来！ -->
-      <!--污染指数-->
-      <text class="centerItemText" style="margin-left: 10rpx; margin-right: 10rpx">{{aqi}}</text>
-      <!--污染指数对应name-->
-      <text class="centerItemText">{{quality}}</text>
-    </view>
-    <view class="centerItem" style="margin-left: 25rpx">
-      <image class="centerItemImage" src="../../image/wind.png" />
-      <text class="centerItemText" style="margin-left: 10rpx; margin-right: 10rpx">{{windPower}}</text>
-      <!--风-->
-      <text class="centerItemText">{{windDirection}}</text>
-    </view>
-    
-  </view>
-  
-  <!-- 底部view -->
-  
-  <!--<view class="line">
-  <view class="bottomView">
-    <block wx:key="{{item}}" wx:for-items="{{list}}">
-      <view class="bottomItemView">
-        <image class="bottomImage" src="{{item.day_weather_pic}}" style="margin-bottom: 15rpx;" />
-        <text wx:if="{{item.weekday == 1}}" class="bottomText">星期一</text>
-        <text wx:elif="{{item.weekday == 2}}" class="bottomText">星期二</text>
-        <text wx:elif="{{item.weekday == 3}}" class="bottomText">星期三</text>
-        <text wx:elif="{{item.weekday == 4}}" class="bottomText">星期四</text>
-        <text wx:elif="{{item.weekday == 5}}" class="bottomText">星期五</text>
-        <text wx:elif="{{item.weekday == 6}}" class="bottomText">星期六</text>
-        <text wx:else="{{item.weekday == 7}}" class="bottomText">星期日</text>
-        <view class="degreeView" style="margin-top: 20rpx;">
-          <text class="detailInfoDegree">{{item.night_air_temperature}}°</text>
-          <!--<image class="detailInfoCircle" src="../../image/circle.png" />-->
-          <!--<text class="detailInfoLine">/</text> 
-          <text class="detailInfoDegree">{{item.day_air_temperature}}°</text>
-          <!-- style优先级比class高会覆盖class中相同属性 
-          <image class="detailInfoCircle" style="margin-left: 57rpx; margin-right: 40rpx" src="../../image/circle.png" />
+    </view>                                                           
+    <scroll-view scroll-x  class="hourly">
+      <view class="wrap">
+        <view class="hour" wx:key="" wx:for="{{need3HourForcast}}" wx:for-item="item">
+          <view>{{item.hour}}</view>
+          <image src="{{item.weather_pic}}" />
+          <view>{{item.temperature}}°</view> 
+        </view>        
+      </view>
+
+    </scroll-view> 
+    <scroll-view scroll-x  class="hourly">
+      <view class="rap">
+        <view class="wide">
+           <view class="title">日出日落</view>
+        <view class="description">{{sun_begin_end}}</view>
+        </view>    
+            <view class="wide">
+           <view class="title">降雨</view>
+        <view class="description">{{jiangshui}}</view>
+        </view>   
+        <view class="wide">
+           <view class="title">空气排名</view>
+        <view class="description">{{num}}</view>
         </view>
+        <view class="wide">
+           <view class="title">海拔</view>
+        <view class="description">{{c15}}</view>
+        </view>    
+        <view class="wide">
+           <view class="title">气压</view>
+        <view class="description">{{air_press}}</view>
+        </view>   
+         
       </view>
-    </block>
+
+    </scroll-view> 
   </view>
-</view>-->
-</view>
+
+  <view class="suggestion" style="background : #FFFFFF;">
+    <view class="car_washing">
+      <view class="detail">
+        <view class="title">洗车 {{wash_car.title}}</view>
+        <view class="description">{{wash_car.desc}}</view>
+      </view>
+    </view>
+    <view class="dressing">
+      <view class="detail">
+        <view class="title">穿衣 {{clothes.title}}</view>
+        <view class="description">{{clothes.desc}}</view>
+      </view>
+    </view>
+    <view class="flu">
+      <view class="detail">
+        <view class="title">感冒 {{cold.title}}</view>
+        <view class="description">{{cold.desc}}</view>
+      </view>
+    </view>
+    <view class="restriction">
+      <view class="detail">
+        <view class="title">旅行 {{travel.title}}</view>
+        <view class="description">{{travel.desc}}</view>
+      </view>
+    </view>
+    <view class="sport">
+      <view class="detail">
+        <view class="title">运动 {{sports.title}}</view>
+        <view class="description">{{sports.desc}}</view>
+      </view>
+    </view>  
+  </view>
+
+</scroll-view>
